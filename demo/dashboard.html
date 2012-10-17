@@ -26,10 +26,11 @@
           // to make it possible to add widgets more than once, we create clientside unique id's
           // this is for demo purposes: normally this would be an id generated serverside
           var startId = 100;
-
+      
           var dashboard = $('#dashboard').dashboard({
             // layout class is used to make it possible to switch layouts
             layoutClass:'layout',
+            debuglevel : 1,
             // feed for the widgets which are on the dashboard when opened
             json_data : {
               url: "jsonfeed/mywidgets.json"
@@ -90,7 +91,14 @@
               "metadata":widget.metadata
               }, dashboard.element.find('.column:first'));
           });
-
+          //
+          dashboard.element.live('dashboardStateChange',function(e, obj){
+  	  		alert("Layout  Changed by widgetDeleted.... " + dashboard.serialize() + " ," + obj);
+ 	  	   });          
+          
+          dashboard.element.live('dashboardLayoutChanged',function(e, obj){
+  	  		alert("Layout  Changed by dashboardLayoutChanged.... " + dashboard.serialize() + " ," + obj);
+ 	  	   });
           // the init builds the dashboard. This makes it possible to first unbind events before the dashboars is built.
           dashboard.init();
         }
