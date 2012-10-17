@@ -1,0 +1,14 @@
+{
+  "name": "dashboard",
+  "version": "1.1.0",
+  "description": "jquery.dashboard",
+  "origional": "Origional Source: http://connect.gxsoftware.com/dashboardplugin/demo/dashboard.html",
+  "homepage": "https://github.com/intabulas/jquery.dashboard",
+  "origionalauthor": { "name": "Mark Machielsen" },
+  "author": { "name": "Mark Lussier <mlussier@gmail.com>" },
+  "licenses": [ { "url":"http://www.opensource.org/licenses/mit-license.php" }, { "url": "http://www.gnu.org/licenses/gpl.html"}],
+  "dependencies": {
+    "grunt-contrib": "*"
+  }
+
+}
