@@ -95,7 +95,7 @@ body {
 }
 .header_tile_image {
   background:url("lake.png") repeat-x scroll center top transparent;
-  height:176px;
+  height:30px;
 }
 .headerlink {
   color:#ffffff;
